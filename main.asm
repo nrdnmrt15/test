@@ -25,14 +25,7 @@ StopWDT     mov.w   #WDTPW|WDTHOLD,&WDTCTL  ; Stop watchdog timer
 
 ;-------------------------------------------------------------------------------
 							 ; Aufgabe 1 : die Summe der Zahlen von 1 bis 100
-							 ; Das Ergebnis in R5
-		MOV		#0d,R5   	 ; Zuerst speichere 0 in R5
-		MOV		#100d,R6	 ; Dann speichere 100 in R6
-_LOOP	ADD		R6,R5		 ; Addiere ich Zahl in R6 mit Zahl in R5 dann wird die Summe in R5 geschrieben
-		DEC		R6			 ; Dec. Zahl in R6
-		JZ		BEENDE		 ; Wenn Zahl in R6 0 wird, endet die Schleife
-		JMP		_LOOP	     ; Wenn Zahl nicht 0 waere zurück (_LOOP)
-BEENDE	NOP					 ; Ergebnis = 5050d
+
 ;-------------------------------------------------------------------------------
 ; Stack Pointer definition
 ;-------------------------------------------------------------------------------
